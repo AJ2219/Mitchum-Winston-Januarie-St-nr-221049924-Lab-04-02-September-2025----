@@ -1,0 +1,210 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5; /* light grey */
+  color: #222; /* near black */
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Sections */
+main section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Form */
+form {
+  
+   max-width: 600px;   /* adjust size, e.g. 500px */
+  margin: 0 auto; 
+}
+
+.Form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #00bfa6; /* accent color */
+  box-shadow: 0 0 0 3px rgba(0,191,166,0.2);
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+small.error-message {
+  color: #d93025;
+  font-size: 0.9rem;
+}
+
+small.optional {
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* Buttons */
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button[type="submit"] {
+  background: #00bfa6;
+  color: #fff;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background: #009c88;
+}
+
+button[type="reset"] {
+  background: #e0e0e0;
+  color: #333;
+}
+
+button[type="reset"]:hover {
+  background: #ccc;
+}
+
+.btn-remove {
+  background: #d93025;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.btn-remove:hover {
+  background: #b0241b;
+}
+
+/* Profile cards */
+.student-profiles {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.student-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.student-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-info h3 {
+  margin-bottom: 0.2rem;
+}
+
+.card-info p {
+  margin-bottom: 0.4rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.chip {
+  background: #00bfa6;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+thead {
+  background: #333;
+  color: #fff;
+}
+
+th, td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background: #f9f9f9;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}

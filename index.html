@@ -1,0 +1,119 @@
+<!-- Mitchum Winston Januarie St nr:221049924 Lab 04 02 September 2025 -->
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title> Registration and Profile Cards</title>
+        <link rel="stylesheet" href="style.css">
+    
+    </head>
+    <body>
+        <!-- form Section (Registration form ) -->
+        <main>
+        <section id="Form-Section" aria-labelledby="Form-Heading">
+            <h2 id="Form-Heading"> Student Registration Form</h2>
+
+            <form id="Registration_form" novalidate>
+                <div class="Form-row">
+                    <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required aria-required="true" aria-describedby="firstNameError" />
+                </div>
+
+                <div class="Form-row">
+                    <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required aria-required="true" aria-describedby="lastNameError" />
+                </div>
+
+                <div class="Form-row">
+                    <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true" aria-describedby="emailError" />
+                </div>
+
+         <!-- Programme section -->
+
+                <div class="Form-row">
+                    <label for="programme">Programme <span aria-hidden="true">*</span></label>
+                    <select id="programme" name="programme" required aria-required="true" aria-describedby="programmeError">
+                        <option value="">Select a programme</option>
+                        <option value="Bacholar of Computer Science">Bacholar of Computer Science</option>
+                        <option value="Bacholar of Information Technology">Bacholar of Information Technology</option>
+                        <option value="Bacholar of Software Engineering">Bacholar of Engineering</option>
+                    </select>
+                </div>
+
+                <fieldset class="Form-row">
+                    <legend>Year of Study <span aria-hidden="true">*</span></legend>
+                    <label for="Year 1">Year 1</label>
+                    <input type="radio" id="Year 1" name="yearOfStudy" value="Year 1" required aria-required="true" />
+                    <label for="Year 2">Year 2</label>
+                    <input type="radio" id="Year 2" name="yearOfStudy" value="Year 2" required aria-required="true" />
+                    <label for="Year 3">Year 3</label>
+                    <input type="radio" id="Year 3" name="yearOfStudy" value="Year 3" required aria-required="true" />
+                    <label for="Year 4">Year 4</label>
+                    <input type="radio" id="Year 4" name="yearOfStudy" value="Year 4" required aria-required="true" />
+                </fieldset>
+
+                <fieldset class="Form-row">
+                    <legend>Interests</legend>
+                    <label for="interest1">Web Application</label>
+                    <input type="checkbox" id="interest1" name="interests" value="Interest 1" />
+                    <label for="interest2">Mobile Application</label>
+                    <input type="checkbox" id="interest2" name="interests" value="Interest 2" />
+                    <label for="interest3">Artificial Intelligence</label>
+                    <input type="checkbox" id="interest3" name="interests" value="Interest 3" />
+                    <label for="interest4">Data Science</label>
+                    <input type="checkbox" id="interest4" name="interests" value="Interest 4" />
+                </fieldset>
+        
+        <!-- Photo section (URL LINK) -->
+                <div class="Form-row">
+                    <label for="Photo_url">Photo URL</label>
+                    <input type="url" name="Photo" id="Photo" placeholder="https://example.com/photo.jpg">
+                    <small class="optional">Optional - leave blank if not applicable</small>
+                    <small class="error-message" id="PhotoError"></small>
+                </div>
+
+                <div id="live" class="Form-row" role="status" aria-live="polite"></div>
+
+                <div class="Form-row">
+                    <button id="addStudent" type="submit">Add Student</button>
+                    <button id="reset" type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <hr />
+    <!-- Profile cards section  -->
+        <section id="Profile-cards" aria-labelledby="Profile-cards">
+            <h2>Student Profiles</h2>
+            <div id="studentProfiles" class="student-profiles" aria-live="polite"></div>
+        </section>
+    <!-- Summary table (remove option too) -->
+        <section id="summaryTable" aria-labelledby="summaryTable">
+            <h2>Summary Table</h2>
+            <table id="summary" summary="List of registered student information">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Programme</th>
+                        <th>Year of Study</th>
+                        <th>Interests</th>
+                    </tr>
+                </thead>
+                <tbody id="summaryBody">
+                    <!-- Summary rows will be added here -->
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 WAD Lab 04 (St nr:221049924)</p>
+        </footer>
+
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
+

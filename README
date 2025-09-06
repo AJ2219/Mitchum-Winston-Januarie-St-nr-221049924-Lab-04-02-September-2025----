@@ -1,0 +1,25 @@
+<!-- Mitchum Winston Januarie St nr:221049924 Lab 04 02 September 2025 -->
+
+Student Registration & Profile Cards
+
+A simple web application built for **WAD621S - Lab 04 Assignment.
+
+The project demonstrates how to create a registration form, validate inputs,  
+and dynamically produce profile cards and a summary table usingHTML, CSS, and JavaScript.
+
+
+
+Features
+Registration form with inline validation
+Dynamic profile card creation
+Accessible semantic HTML structure
+Summary table of all registered students
+Modern responsive design with accent color
+
+Technologies Used
+HTML5 for structure  
+CSS for styling  
+JavaScript  
+
+---
+
